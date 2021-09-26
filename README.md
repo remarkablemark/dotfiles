@@ -76,16 +76,10 @@ exec -l $SHELL
 
 ## Vim
 
-Reload vimrc in command-line:
-
-```sh
-source ~/.vim/vimrc
-```
-
 Reload vimrc in Vim:
 
 ```sh
-vim
+vim ~/.vim/vimrc
 ```
 
 ```vim
