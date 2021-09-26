@@ -97,7 +97,7 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
     brew install python3
   fi
 
-  if ! [[ -f bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]]; then
+  if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
     echo 'Compiling YouCompleteMe...'
     python3 bundle/YouCompleteMe/install.py --all
   fi
