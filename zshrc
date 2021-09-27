@@ -2,9 +2,6 @@
 # Custom
 ##
 
-# https://github.com/ohmyzsh/ohmyzsh/issues/6835
-ZSH_DISABLE_COMPFIX=true
-
 # /usr/bin must not occur before /usr/local/bin in your PATH
 # otherwise system-provided programs will be used instead of those
 # provided by Homebrew

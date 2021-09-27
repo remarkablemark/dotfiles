@@ -62,7 +62,10 @@ if ! [[ -d ~/.oh-my-zsh/ ]]; then
 fi
 
 echo 'Copying and updating Oh My Zsh config...'
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+# https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-400571406
+echo 'ZSH_DISABLE_COMPFIX=true' > ~/.zshrc
+echo '' >> ~/.zshrc
+cat ~/.oh-my-zsh/templates/zshrc.zsh-template >> ~/.zshrc
 sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
 echo '' >> ~/.zshrc
 cat zshrc >> ~/.zshrc
