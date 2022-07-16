@@ -15,7 +15,7 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Java (JDK)
-export PATH="/usr/local/opt/java/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
