@@ -15,16 +15,19 @@ touch ~/.hushlogin
 if [[ $(command -v brew) == '' ]]; then
   echo 'Installing homebrew...'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # add Homebrew to PATH
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # install git
-if [[ $(command -v git) != '/usr/local/bin/git' ]]; then
+if [[ $(command -v git) != '' ]]; then
   echo 'Installing git...'
   brew install git
 fi
 
 # install vim
-if [[ $(command -v vim) != '/usr/local/bin/vim' ]]; then
+if [[ $(command -v vim) != '' ]]; then
   echo 'Installing vim...'
   brew install vim
 fi
@@ -62,15 +65,18 @@ if ! [[ -d ~/.oh-my-zsh/ ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-echo 'Copying and updating Oh My Zsh config...'
-# https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-400571406
-echo 'ZSH_DISABLE_COMPFIX=true' > ~/.zshrc
-echo '' >> ~/.zshrc
-cat ~/.oh-my-zsh/templates/zshrc.zsh-template >> ~/.zshrc
-sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
-echo '' >> ~/.zshrc
-cat zshrc >> ~/.zshrc
-source ~/.zshrc
+# copy and update Oh My Zsh config
+if ! [[ -f ~/.zshrc ]]; then
+  echo 'Copying and updating Oh My Zsh config...'
+  # https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-400571406
+  echo 'ZSH_DISABLE_COMPFIX=true' > ~/.zshrc
+  echo '' >> ~/.zshrc
+  cat ~/.oh-my-zsh/templates/zshrc.zsh-template >> ~/.zshrc
+  sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
+  echo '' >> ~/.zshrc
+  cat zshrc >> ~/.zshrc
+  source ~/.zshrc
+fi
 
 # install Vundle
 if ! [[ -d bundle/Vundle.vim/ ]]; then
@@ -81,7 +87,6 @@ if ! [[ -d bundle/Vundle.vim/ ]]; then
   vim +PluginInstall +qall
   echo 'Vim plugins installed.'
 fi
-
 
 # compile Vim plugin YouCompleteMe: https://github.com/ycm-core/YouCompleteMe#macos
 if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
