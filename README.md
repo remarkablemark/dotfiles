@@ -10,6 +10,7 @@
 - [Shell](#shell)
 - [Vim](#vim)
 - [iTerm2](#iterm2)
+- [Software](#software)
 - [Directory Structure](#directory-structure)
 - [License](#license)
 
@@ -19,14 +20,14 @@
 
 > My dotfiles are only compatible with macOS.
 
-If you have SSH access to the repository, then [set up your SSH key.](https://remarkablemark.org/blog/2020/04/13/avoid-ssh-passphrase/) and clone the repository:
+If you have SSH access to the repository, then [set up your SSH key](https://remarkablemark.org/blog/2020/04/13/avoid-ssh-passphrase/) and clone the repository:
 
 ```sh
 git clone git@github.com:remarkablemark/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-If you don't have SSH access to the repository, then clone the repository:
+Otherwise, clone the repository:
 
 ```sh
 git clone https://github.com/remarkablemark/dotfiles.git ~/dotfiles
@@ -99,6 +100,11 @@ Load preferences: **iTerm2** > **Preferences** > **General** > **Preferences** >
 Update profile: **iTerm2** > **Preferences** > **Profiles** > **Colors and Text**
 
 Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Working Directory** > **Reuse previous session's directory**
+
+## Software
+
+- [f.lux](https://justgetflux.com/)
+- [Spectacle](https://www.spectacleapp.com/)
 
 ## Directory Structure
 
