@@ -12,7 +12,7 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # Java (JDK)
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
