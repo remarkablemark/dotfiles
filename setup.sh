@@ -43,6 +43,7 @@ git config --global core.editor $(which vim)
 git config --global core.ignorecase false
 git config --global init.defaultBranch 'master'
 git config --global pager.branch false
+git config --global --add --bool push.autoSetupRemote true
 git config --global user.email 'mark@remarkablemark.org'
 git config --global user.name 'Mark'
 
