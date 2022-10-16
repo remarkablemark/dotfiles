@@ -11,7 +11,8 @@ fi
 # disable last login message
 touch ~/.hushlogin
 
-# install brew: https://brew.sh/
+# install brew
+# https://brew.sh/
 if [[ $(command -v brew) == '' ]]; then
   echo 'Installing homebrew...'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -60,7 +61,8 @@ if [[ $(command -v zsh) == '' ]]; then
   brew install zsh
 fi
 
-# install Oh My Zsh: https://github.com/ohmyzsh/ohmyzsh
+# install Oh My Zsh
+# https://github.com/ohmyzsh/ohmyzsh
 if ! [[ -d ~/.oh-my-zsh/ ]]; then
   echo 'Installing Oh My Zsh...'
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -141,10 +143,11 @@ if [[ $(command -v node) == '' ]]; then
   brew install node
 fi
 
-# install nvm: https://github.com/nvm-sh/nvm
+# install nvm
+# https://github.com/nvm-sh/nvm#install--update-script
 if ! [[ -d ~/.nvm/ ]]; then
   echo 'Installing nvm...'
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 fi
 
 # install Yarn
