@@ -91,30 +91,6 @@ if ! [[ -d bundle/Vundle.vim/ ]]; then
   echo 'Vim plugins installed.'
 fi
 
-# compile Vim plugin YouCompleteMe: https://github.com/ycm-core/YouCompleteMe#macos
-if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
-  # dependencies required to build plugin
-  if [[ $(command -v cmake) == '' ]]; then
-    echo 'Installing cmake...'
-    brew install cmake
-  fi
-
-  if [[ $(command -v go) == '' ]]; then
-    echo 'Installing go...'
-    brew install go
-  fi
-
-  if [[ $(command -v python3) == '' ]]; then
-    echo 'Installing python3...'
-    brew install python3
-  fi
-
-  if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
-    echo 'Compiling YouCompleteMe...'
-    python3 bundle/YouCompleteMe/install.py --all
-  fi
-fi
-
 # install tmux
 if [[ $(command -v tmux) == '' ]]; then
   echo 'Installing tmux...'
@@ -172,6 +148,18 @@ fi
 if [[ $(command -v java) == '' ]]; then
   echo 'Installing java...'
   brew install java
+fi
+
+# compile Vim plugin YouCompleteMe
+# https://github.com/ycm-core/YouCompleteMe#macos
+if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
+  echo 'Installing YCM dependencies...'
+  brew install cmake python go nodejs
+
+  if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
+    echo 'Compiling YouCompleteMe...'
+    python3 bundle/YouCompleteMe/install.py --ts-completer # --all
+  fi
 fi
 
 # restart shell
