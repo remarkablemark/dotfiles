@@ -124,6 +124,7 @@ fi
 if ! [[ -d ~/.nvm/ ]]; then
   echo 'Installing nvm...'
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+  nvm alias default node
 fi
 
 # install Yarn
