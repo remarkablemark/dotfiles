@@ -24,13 +24,13 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dense-analysis/ale'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'prettier/vim-prettier'
 Plugin 'preservim/nerdtree'
+Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
