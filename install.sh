@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 'Setup start.'
 
@@ -22,13 +22,13 @@ if [[ $(command -v brew) == '' ]]; then
 fi
 
 # install git
-if [[ $(command -v git) != '' ]]; then
+if [[ $(command -v git) == '' ]]; then
   echo 'Installing git...'
   brew install git
 fi
 
 # install vim
-if [[ $(command -v vim) != '' ]]; then
+if [[ $(command -v vim) == '' ]]; then
   echo 'Installing vim...'
   brew install vim
 fi
