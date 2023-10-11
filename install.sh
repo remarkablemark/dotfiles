@@ -45,8 +45,8 @@ git config --global core.ignorecase false
 git config --global init.defaultBranch 'master'
 git config --global pager.branch false
 git config --global --add --bool push.autoSetupRemote true
-git config --global url.'https://'.insteadOf 'git://'
-git config --global --add url.'git@github.com:'.insteadOf 'https://github.com/'
+# git config --global url.'https://'.insteadOf 'git://'
+# git config --global --add url.'git@github.com:'.insteadOf 'https://github.com/'
 git config --global user.email 'mark@remarkablemark.org'
 git config --global user.name 'Mark'
 
