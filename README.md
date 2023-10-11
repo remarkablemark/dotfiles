@@ -6,7 +6,7 @@
 <summary>Table of Contents</summary>
 
 - [Prerequisites](#prerequisites)
-- [Setup](#setup)
+- [Install](#install)
 - [Shell](#shell)
 - [Vim](#vim)
 - [iTerm2](#iterm2)
@@ -34,12 +34,12 @@ git clone https://github.com/remarkablemark/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-## Setup
+## Install
 
-Run [setup](https://github.com/remarkablemark/dotfiles/blob/master/setup.sh):
+Run [install](https://github.com/remarkablemark/dotfiles/blob/master/install.sh):
 
 ```sh
-./setup.sh
+./install.sh
 ```
 
 If [Vundle](https://github.com/VundleVim/Vundle.vim) isn't installed, you can install it manually:
@@ -114,16 +114,17 @@ tree -I bundle
 
 ```
 .
+├── LICENSE
 ├── README.md
 ├── com.googlecode.iterm2.plist
 ├── gitignore
+├── install.sh
 ├── powerline.tmux
-├── setup.sh
 ├── tmux.conf
 ├── vimrc
 └── zshrc
 
-0 directories, 8 files
+1 directory, 9 files
 ```
 
 ## License
