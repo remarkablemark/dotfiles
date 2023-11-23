@@ -159,6 +159,12 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   fi
 fi
 
+# install fzf
+if [[ $(command -v fzf) == '' ]]; then
+  echo 'Installing fzf...'
+  brew install fzf
+fi
+
 # restart shell
 echo 'Setup end.'
 exec -l $SHELL
