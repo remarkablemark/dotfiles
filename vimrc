@@ -81,37 +81,37 @@ set mouse=a                   " enable mouse support
 
 " color settings (if supported)
 if &t_Co > 2 || has('gui_running')
-    " enable 256-color mode
-    set t_Co=256
-    " enable syntax highlighting
-    syntax on
+  " enable 256-color mode
+  set t_Co=256
+  " enable syntax highlighting
+  syntax on
 
-    " solarized colorscheme
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
-    colorscheme solarized
+  " solarized colorscheme
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+  colorscheme solarized
 
-    " line number color
-    highlight LineNr cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE
-    " highlight cursor line
-    set cursorline
-    highlight CursorLine cterm=NONE ctermbg=255
-    highlight CursorLineNr cterm=NONE " do not underline cursor line number
-    " highlight as you type your search
-    set incsearch
-    highlight IncSearch ctermfg=Yellow ctermbg=DarkGray
-    " highlight search results
-    set hlsearch
-    highlight Search ctermfg=Yellow ctermbg=DarkGray
-    " visual mode highlight color
-    highlight Visual ctermfg=254 ctermbg=237
+  " line number color
+  highlight LineNr cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE
+  " highlight cursor line
+  set cursorline
+  highlight CursorLine cterm=NONE ctermbg=255
+  highlight CursorLineNr cterm=NONE " do not underline cursor line number
+  " highlight as you type your search
+  set incsearch
+  highlight IncSearch ctermfg=Yellow ctermbg=DarkGray
+  " highlight search results
+  set hlsearch
+  highlight Search ctermfg=Yellow ctermbg=DarkGray
+  " visual mode highlight color
+  highlight Visual ctermfg=254 ctermbg=237
 
-    " tab labels which are not active
-    highlight TabLine     ctermfg=240 ctermbg=254
-    " remaining tabeline with no labels (background)
-    highlight TabLineFill ctermfg=240 ctermbg=254
-    " current active tab label
-    highlight TabLineSel  ctermfg=24  ctermbg=255
+  " tab labels which are not active
+  highlight TabLine     ctermfg=240 ctermbg=254
+  " remaining tabeline with no labels (background)
+  highlight TabLineFill ctermfg=240 ctermbg=254
+  " current active tab label
+  highlight TabLineSel  ctermfg=24  ctermbg=255
 endif
 
 ""
