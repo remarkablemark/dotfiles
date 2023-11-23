@@ -115,17 +115,11 @@ if [[ $(command -v ag) == '' ]]; then
   brew install the_silver_searcher
 fi
 
-# install Node.js
-if [[ $(command -v node) == '' ]]; then
-  echo 'Installing node...'
-  brew install node
-fi
-
 # install nvm
 # https://github.com/nvm-sh/nvm#install--update-script
 if ! [[ -d ~/.nvm/ ]]; then
   echo 'Installing nvm...'
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   nvm alias default node
 fi
 
