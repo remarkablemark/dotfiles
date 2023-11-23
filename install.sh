@@ -155,7 +155,7 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
 
   if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
     echo 'Compiling YouCompleteMe...'
-    python3 bundle/YouCompleteMe/install.py --ts-completer # --all
+    python3 bundle/YouCompleteMe/install.py --all # --ts-completer
   fi
 fi
 
