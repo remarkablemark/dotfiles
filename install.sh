@@ -36,6 +36,7 @@ fi
 mkdir -p ~/.vim
 ln -sf "$(pwd)/vimrc" ~/.vim/vimrc
 ln -sf "$(pwd)/bundle" ~/.vim/bundle
+ln -sf "$(pwd)/after" ~/.vim/after
 
 # set up global git config
 echo 'Setting up global git config...'
