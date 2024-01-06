@@ -166,6 +166,12 @@ if [[ $(command -v fzf) == '' ]]; then
   brew install fzf
 fi
 
+# install fd
+if [[ $(command -v fd) == '' ]]; then
+  echo 'Installing fd...'
+  brew install fd
+fi
+
 # restart shell
 echo 'Setup end.'
 exec -l $SHELL
