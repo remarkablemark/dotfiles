@@ -110,12 +110,6 @@ echo 'Copying tmux config...'
 cp tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
-# install The Silver Searcher: https://github.com/ggreer/the_silver_searcher
-if [[ $(command -v ag) == '' ]]; then
-  echo 'Installing The Silver Searcher...'
-  brew install the_silver_searcher
-fi
-
 # install nvm
 # https://github.com/nvm-sh/nvm#install--update-script
 if ! [[ -d ~/.nvm/ ]]; then
@@ -170,6 +164,18 @@ fi
 if [[ $(command -v fd) == '' ]]; then
   echo 'Installing fd...'
   brew install fd
+fi
+
+# install The Silver Searcher (ag)
+if [[ $(command -v ag) == '' ]]; then
+  echo 'Installing The Silver Searcher...'
+  brew install the_silver_searcher
+fi
+
+# install ripgrep (rg)
+if [[ $(command -v rg) == '' ]]; then
+  echo 'Installing ripgrep...'
+  brew install rg
 fi
 
 # restart shell
