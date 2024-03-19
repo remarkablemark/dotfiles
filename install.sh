@@ -40,23 +40,16 @@ ln -sf "$(pwd)/after" ~/.vim/after
 
 # set up global git config
 echo 'Setting up global git config...'
-git config --global color.ui auto
-git config --global core.editor $(which vim)
-git config --global core.ignorecase false
-git config --global init.defaultBranch 'master'
-git config --global pager.branch false
-git config --global --add --bool push.autoSetupRemote true
+ln -sf "$(pwd)/gitignore" ~/.gitignore
+git config --global include "$(pwd)/.gitconfig"
+git config --file .gitconfig core.editor $(which vim)
+
 # git config --global url.'https://'.insteadOf 'git://'
 # git config --global --add url.'git@github.com:'.insteadOf 'https://github.com/'
-git config --global user.email 'mark@remarkablemark.org'
-git config --global user.name 'Mark'
+# git config --global includeif.gitdir:~/.path=~/.gitconfig
 
 # show global git config
 git config --global --list | cat
-
-# global gitignore
-ln -sf "$(pwd)/gitignore" ~/.gitignore
-git config --global core.excludesfile ~/.gitignore
 
 # install zsh
 if [[ $(command -v zsh) == '' ]]; then
