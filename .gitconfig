@@ -1,21 +1,26 @@
+[branch]
+	sort = -committerdate
 [color]
 	ui = auto
+[column]
+	ui = auto
+[commit]
+	gpgsign = true
 [core]
 	editor = /opt/homebrew/bin/vim
 	ignorecase = false
   excludesfile = "~/.gitignore"
+[gpg]
+	format = ssh
 [init]
 	defaultBranch = master
 [pager]
 	branch = false
-[user]
-	email = mark@remarkablemark.org
-	name = Mark
 [push]
 	autoSetupRemote = true
 [rerere]
 	enabled = true
-[column]
-	ui = auto
-[branch]
-	sort = -committerdate
+[user]
+	email = mark@remarkablemark.org
+	name = Mark
+	signingkey = "~/.ssh/id_rsa.pub"
