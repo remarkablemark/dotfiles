@@ -33,16 +33,20 @@ if [[ $(command -v vim) == '' ]]; then
   brew install vim
 fi
 
-mkdir -p ~/.vim
-ln -sf "$(pwd)/vimrc" ~/.vim/vimrc
-ln -sf "$(pwd)/bundle" ~/.vim/bundle
-ln -sf "$(pwd)/after" ~/.vim/after
+if [[ ! -d ~/.vim ]]; then
+  mkdir -p ~/.vim
+  ln -sf "$(pwd)/after" ~/.vim/after
+  ln -sf "$(pwd)/bundle" ~/.vim/bundle
+  ln -sf "$(pwd)/vimrc" ~/.vim/vimrc
+fi
 
 # set up global git config
-echo 'Setting up global git config...'
-ln -sf "$(pwd)/gitignore" ~/.gitignore
-git config --global include "$(pwd)/.gitconfig"
-git config --file .gitconfig core.editor $(which vim)
+if [[ ! -f ~/.gitconfig ]]; then
+  echo 'Setting up global git config...'
+  ln -sf "$(pwd)/gitignore" ~/.gitignore
+  git config --global include "$(pwd)/.gitconfig"
+  git config --file .gitconfig core.editor $(which vim)
+fi
 
 # git config --global url.'https://'.insteadOf 'git://'
 # git config --global --add url.'git@github.com:'.insteadOf 'https://github.com/'
