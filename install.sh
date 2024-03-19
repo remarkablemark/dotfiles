@@ -63,13 +63,13 @@ fi
 
 # install Oh My Zsh
 # https://github.com/ohmyzsh/ohmyzsh
-if ! [[ -d ~/.oh-my-zsh/ ]]; then
+if [[ ! -d ~/.oh-my-zsh/ ]]; then
   echo 'Installing Oh My Zsh...'
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # copy and update Oh My Zsh config
-if ! [[ -f ~/.zshrc ]]; then
+if [[ ! -f ~/.zshrc ]]; then
   echo 'Copying and updating Oh My Zsh config...'
   # https://github.com/ohmyzsh/ohmyzsh/issues/6835#issuecomment-400571406
   echo 'ZSH_DISABLE_COMPFIX=true' > ~/.zshrc
@@ -82,7 +82,7 @@ if ! [[ -f ~/.zshrc ]]; then
 fi
 
 # install Vundle
-if ! [[ -d bundle/Vundle.vim/ ]]; then
+if [[ ! -d bundle/Vundle.vim/ ]]; then
   echo 'Installing Vundle...'
   git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
@@ -109,7 +109,7 @@ tmux source-file ~/.tmux.conf
 
 # install nvm
 # https://github.com/nvm-sh/nvm#install--update-script
-if ! [[ -d ~/.nvm/ ]]; then
+if [[ ! -d ~/.nvm/ ]]; then
   echo 'Installing nvm...'
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   nvm alias default node
