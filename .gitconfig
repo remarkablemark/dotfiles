@@ -14,6 +14,9 @@
 	format = ssh
 [init]
 	defaultBranch = master
+[maintenance]
+	auto = false
+	strategy = incremental
 [pager]
 	branch = false
 [push]
