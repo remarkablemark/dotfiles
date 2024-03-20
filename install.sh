@@ -44,8 +44,8 @@ fi
 if [[ ! -f ~/.gitconfig ]]; then
   echo 'Setting up global git config...'
   ln -sf "$(pwd)/gitignore" ~/.gitignore
-  git config --global include "$(pwd)/.gitconfig"
   git config --file .gitconfig core.editor $(which vim)
+  git config --global include.path "$(pwd)/.gitconfig"
 fi
 
 # git config --global url.'https://'.insteadOf 'git://'
