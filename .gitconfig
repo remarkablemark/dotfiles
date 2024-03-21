@@ -2,8 +2,6 @@
 	sort = -committerdate
 [color]
 	ui = auto
-[column]
-	ui = auto
 [commit]
 	gpgsign = true
 [core]
