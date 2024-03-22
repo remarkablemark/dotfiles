@@ -18,6 +18,7 @@
 
 ## Prerequisites
 
+> [!NOTE]
 > My dotfiles are only compatible with macOS.
 
 If you have SSH access to the repository, then [set up your SSH key](https://remarkablemark.org/blog/2020/04/13/avoid-ssh-passphrase/) and clone the repository:
@@ -104,7 +105,7 @@ Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Work
 ## Software
 
 - [f.lux](https://justgetflux.com/)
-- [Spectacle](https://www.spectacleapp.com/)
+- [Spectacle](https://github.com/eczarny/spectacle)
 
 ## Directory Structure
 
@@ -116,6 +117,9 @@ tree -I bundle
 .
 ├── LICENSE
 ├── README.md
+├── after
+│   └── ftplugin
+│       └── php.vim
 ├── com.googlecode.iterm2.plist
 ├── gitignore
 ├── install.sh
@@ -124,7 +128,7 @@ tree -I bundle
 ├── vimrc
 └── zshrc
 
-1 directory, 9 files
+3 directories, 10 files
 ```
 
 ## License
