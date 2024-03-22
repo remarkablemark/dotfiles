@@ -105,7 +105,7 @@ Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Work
 ## Software
 
 - [f.lux](https://justgetflux.com/)
-- [Spectacle](https://github.com/eczarny/spectacle)
+- [Rectangle](https://rectangleapp.com/)
 
 ## Directory Structure
 
