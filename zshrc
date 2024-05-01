@@ -14,9 +14,6 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 # the following to ~/.zshrc:
 eval "$(rbenv init - zsh)"
 
-# Java (JDK)
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
