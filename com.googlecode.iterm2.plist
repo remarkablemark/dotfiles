@@ -14,6 +14,8 @@
 	<false/>
 	<key>CheckTestRelease</key>
 	<false/>
+	<key>CloseBookmarksWindowAfterOpening</key>
+	<true/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -1687,7 +1689,7 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
-	<false/>
+	<true/>
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
@@ -1775,6 +1777,8 @@
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
 	<false/>
+	<key>TimeBetweenTips</key>
+	<real>604800</real>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
 	<key>TmuxUnpauseAutomatically</key>
