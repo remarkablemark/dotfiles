@@ -52,6 +52,13 @@ fi
 # git config --global --add url.'git@github.com:'.insteadOf 'https://github.com/'
 # git config --global includeif.gitdir:~/.path=~/.gitconfig
 
+# install git lfs
+if [[ $(grep -L 'lfs' ~/.gitconfig) ]]; then
+  echo 'Installing git lfs...'
+  brew install git-lfs
+  git lfs install
+fi
+
 # show global git config
 git config --global --list | cat
 
