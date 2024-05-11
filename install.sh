@@ -13,7 +13,7 @@ touch ~/.hushlogin
 
 # install brew
 # https://brew.sh/
-if [[ $(command -v brew) == '' ]]; then
+if [[ ! $(command -v brew) ]]; then
   echo 'Installing homebrew...'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   # add Homebrew to PATH
@@ -22,13 +22,13 @@ if [[ $(command -v brew) == '' ]]; then
 fi
 
 # install git
-if [[ $(command -v git) == '' ]]; then
+if [[ ! $(command -v git) ]]; then
   echo 'Installing git...'
   brew install git
 fi
 
 # install vim
-if [[ $(command -v vim) == '' ]]; then
+if [[ ! $(command -v vim) ]]; then
   echo 'Installing vim...'
   brew install vim
 fi
@@ -63,7 +63,7 @@ fi
 git config --global --list | cat
 
 # install zsh
-if [[ $(command -v zsh) == '' ]]; then
+if [[ ! $(command -v zsh) ]]; then
   echo 'Installing zsh...'
   brew install zsh
 fi
@@ -99,13 +99,13 @@ if [[ ! -d bundle/Vundle.vim/ ]]; then
 fi
 
 # install tmux
-if [[ $(command -v tmux) == '' ]]; then
+if [[ ! $(command -v tmux) ]]; then
   echo 'Installing tmux...'
   brew install tmux
 fi
 
 # install tmux wrapper for copying/pasting to session clipboard
-if [[ $(command -v reattach-to-user-namespace) == '' ]]; then
+if [[ ! $(command -v reattach-to-user-namespace) ]]; then
   echo 'Installing reattach-to-user-namespace...'
   brew install reattach-to-user-namespace
 fi
@@ -123,15 +123,15 @@ if [[ ! -d ~/.nvm/ ]]; then
 fi
 
 # install Yarn
-if [[ $(command -v yarn) == '' ]]; then
+if [[ ! $(command -v yarn) ]]; then
   echo 'Installing yarn...'
   brew install yarn
 fi
 
 # install rbenv
-if [[ $(command -v rbenv) == '' ]]; then
+if [[ ! $(command -v rbenv) ]]; then
   # ruby depends on openssl
-  if [[ $(command -v openssl) == '' ]]; then
+  if [[ ! $(command -v openssl) ]]; then
     echo 'Installing openssl...'
     brew install openssl
   fi
@@ -141,7 +141,7 @@ if [[ $(command -v rbenv) == '' ]]; then
 fi
 
 # install java
-if [[ $(command -v java) == '' ]]; then
+if [[ ! $(command -v java) ]]; then
   echo 'Installing java...'
   brew install java
 fi
@@ -159,25 +159,25 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
 fi
 
 # install fzf
-if [[ $(command -v fzf) == '' ]]; then
+if [[ ! $(command -v fzf) ]]; then
   echo 'Installing fzf...'
   brew install fzf
 fi
 
 # install fd
-if [[ $(command -v fd) == '' ]]; then
+if [[ ! $(command -v fd) ]]; then
   echo 'Installing fd...'
   brew install fd
 fi
 
 # install The Silver Searcher (ag)
-if [[ $(command -v ag) == '' ]]; then
+if [[ ! $(command -v ag) ]]; then
   echo 'Installing The Silver Searcher...'
   brew install the_silver_searcher
 fi
 
 # install ripgrep (rg)
-if [[ $(command -v rg) == '' ]]; then
+if [[ ! $(command -v rg) ]]; then
   echo 'Installing ripgrep...'
   brew install rg
 fi
