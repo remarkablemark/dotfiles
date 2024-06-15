@@ -6,6 +6,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -13,16 +16,13 @@ call vundle#begin()
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chaimleib/vim-renpy'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf'
@@ -38,6 +38,7 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 " filetype detection[ON] plugin[ON] indent[ON]
 filetype plugin indent on
+" Put your non-Plugin stuff after this line
 
 " display settings
 set background=light          " enable for light terminals
