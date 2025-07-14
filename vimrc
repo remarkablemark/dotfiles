@@ -20,7 +20,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chaimleib/vim-renpy'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -33,6 +32,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
