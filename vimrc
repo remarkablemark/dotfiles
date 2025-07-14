@@ -146,6 +146,8 @@ map <C-n> :NERDTreeToggle<CR> " open NERDTree with Ctrl-N
 ""
 let g:ctrlp_custom_ignore = 'node_modules\|git\|DS_Store'
 let g:ctrlp_working_path_mode = ''
+" https://github.com/kien/ctrlp.vim/issues/174#issuecomment-215829892
+let g:ctrlp_user_command = ['.git', 'git --git-dir=%s/.git ls-files . -co --exclude-standard', 'find %s -type f']
 
 ""
 " The Silver Searcher
