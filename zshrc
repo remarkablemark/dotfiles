@@ -26,3 +26,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --e
 # Java
 # https://docs.gradle.org/current/userguide/compatibility.html
 # export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+
+# Homebrew
+# https://docs.brew.sh/Analytics#opting-out
+export HOMEBREW_NO_ANALYTICS=1
