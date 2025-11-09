@@ -23,10 +23,12 @@ fi
 
 # brew casks
 apps=(
+  'discord'
   'flux-app'
   'google-chrome'
   'iterm2'
   'rectangle'
+  'slack'
 )
 
 # install apps
