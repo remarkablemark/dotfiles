@@ -76,31 +76,11 @@ vim ~/.vim/vimrc
 
 ## iTerm2
 
-Download [iTerm2](https://iterm2.com/):
-
-```sh
-brew install --cask iterm2
-```
-
 Load preferences: **iTerm2** > **Preferences** > **General** > **Preferences** > **Load preferences from a custom folder or URL**: `~/dotfiles/`
 
 Update profile: **iTerm2** > **Preferences** > **Profiles** > **Colors and Text**
 
 Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Working Directory** > **Reuse previous session's directory**
-
-## Software
-
-[f.lux](https://justgetflux.com/):
-
-```sh
-brew install --cask flux-app
-```
-
-[Rectangle](https://rectangleapp.com/):
-
-```sh
-brew install --cask rectangle
-```
 
 ## Directory Structure
 

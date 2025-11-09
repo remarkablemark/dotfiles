@@ -21,6 +21,22 @@ if [[ ! $(command -v brew) ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# brew casks
+apps=(
+  'flux-app'
+  'google-chrome'
+  'iterm2'
+  'rectangle'
+)
+
+# install apps
+for app in "${apps[@]}"; do
+  if [[ ! $(brew list --cask | grep $app) ]]; then
+  echo "Installing $app..."
+  brew install --cask $app
+fi
+done
+
 # install git
 if [[ ! $(command -v git) ]]; then
   echo 'Installing git...'
