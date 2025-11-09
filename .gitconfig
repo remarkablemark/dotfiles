@@ -1,3 +1,5 @@
+# [includeif "gitdir:~/Code/work/"]
+# 	path = "~/Code/work/.gitconfig"
 [branch]
 	sort = -committerdate
 [color]
