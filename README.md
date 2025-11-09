@@ -115,15 +115,15 @@ tree -I bundle
 
 ```
 .
-├── LICENSE
-├── README.md
 ├── after
 │   └── ftplugin
 │       └── php.vim
 ├── com.googlecode.iterm2.plist
 ├── gitignore
 ├── install.sh
+├── LICENSE
 ├── powerline.tmux
+├── README.md
 ├── tmux.conf
 ├── vimrc
 └── zshrc
