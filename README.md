@@ -76,7 +76,7 @@ vim ~/.vim/vimrc
 
 ## iTerm2
 
-Load preferences: **iTerm2** > **Preferences** > **General** > **Preferences** > **Load preferences from a custom folder or URL**: `~/dotfiles/`
+Load preferences: **iTerm2** > **Settings...** > **General** > **Settings** > **Load settings from a custom folder or URL**: `~/dotfiles/`
 
 Update profile: **iTerm2** > **Preferences** > **Profiles** > **Colors and Text**
 
@@ -99,11 +99,12 @@ tree -I bundle
 ├── LICENSE
 ├── powerline.tmux
 ├── README.md
+├── RectangleConfig.json
 ├── tmux.conf
 ├── vimrc
 └── zshrc
 
-3 directories, 10 files
+3 directories, 11 files
 ```
 
 ## License
