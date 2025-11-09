@@ -78,10 +78,6 @@ vim ~/.vim/vimrc
 
 Load preferences: **iTerm2** > **Settings...** > **General** > **Settings** > **Load settings from a custom folder or URL**: `~/dotfiles/`
 
-Update profile: **iTerm2** > **Preferences** > **Profiles** > **Colors and Text**
-
-Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Working Directory** > **Reuse previous session's directory**
-
 ## Directory Structure
 
 ```sh
