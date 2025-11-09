@@ -2,20 +2,6 @@
 
 [remarkablemark's](https://b.remarkabl.org/github) [dotfiles](https://dotfiles.github.io/).
 
-<details>
-<summary>Table of Contents</summary>
-
-- [Prerequisites](#prerequisites)
-- [Install](#install)
-- [Shell](#shell)
-- [Vim](#vim)
-- [iTerm2](#iterm2)
-- [Software](#software)
-- [Directory Structure](#directory-structure)
-- [License](#license)
-
-</details>
-
 ## Prerequisites
 
 > [!NOTE]
@@ -104,8 +90,17 @@ Open tab in same directory: **iTerm2** > **Preferences** > **Profiles** > **Work
 
 ## Software
 
-- [f.lux](https://justgetflux.com/)
-- [Rectangle](https://rectangleapp.com/)
+[f.lux](https://justgetflux.com/):
+
+```sh
+brew install --cask flux-app
+```
+
+[Rectangle](https://rectangleapp.com/):
+
+```sh
+brew install --cask rectangle
+```
 
 ## Directory Structure
 
