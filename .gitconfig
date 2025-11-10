@@ -1,28 +1,39 @@
 # [includeif "gitdir:~/Code/work/"]
 # 	path = "~/Code/work/.gitconfig"
+
 [branch]
 	sort = -committerdate
+
 [color]
 	ui = auto
+
 [commit]
 	gpgsign = true
+
 [core]
 	editor = /opt/homebrew/bin/vim
 	ignorecase = false
   excludesfile = "~/.gitignore"
+
 [gpg]
 	format = ssh
+
 [init]
 	defaultBranch = master
+
 [maintenance]
 	auto = false
 	strategy = incremental
+
 [pager]
 	branch = false
+
 [push]
 	autoSetupRemote = true
+
 [rerere]
 	enabled = true
+
 [user]
 	email = mark@remarkablemark.org
 	name = Mark
