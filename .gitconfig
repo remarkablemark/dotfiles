@@ -37,4 +37,4 @@
 [user]
 	email = mark@remarkablemark.org
 	name = Mark
-	signingkey = "~/.ssh/id_rsa.pub"
+	signingkey = "~/.ssh/id_ed25519.pub"
