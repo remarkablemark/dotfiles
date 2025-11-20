@@ -94,25 +94,32 @@ if &t_Co > 2 || has('gui_running')
 
   " line number color
   highlight LineNr cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE
+
   " highlight cursor line
   set cursorline
   highlight CursorLine cterm=NONE ctermbg=255
   highlight CursorLineNr cterm=NONE " do not underline cursor line number
+
   " highlight as you type your search
   set incsearch
   highlight IncSearch ctermfg=Yellow ctermbg=DarkGray
+
   " highlight search results
   set hlsearch
   highlight Search ctermfg=Yellow ctermbg=DarkGray
+
   " visual mode highlight color
   highlight Visual ctermfg=254 ctermbg=237
 
   " tab labels which are not active
-  highlight TabLine     ctermfg=240 ctermbg=254
-  " remaining tabeline with no labels (background)
+  highlight TabLine ctermfg=240 ctermbg=254
+  " remaining tabline with no labels (background)
   highlight TabLineFill ctermfg=240 ctermbg=254
   " current active tab label
-  highlight TabLineSel  ctermfg=24  ctermbg=255
+  highlight TabLineSel ctermfg=24 ctermbg=255
+
+  " fzf bg
+  highlight PluginFzfBg ctermbg=Black
 endif
 
 ""
@@ -187,13 +194,39 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 ""
 let g:ale_linters = {
 \  'javascript': ['eslint'],
-\  'typescript': ['tsserver', 'eslint']
-\}
+\  'typescript': ['tsserver', 'eslint'],
+\ }
+
 let g:ale_linters#javascript = ['eslint']
 let g:ale_linters#typescript = ['tsserver', 'eslint']
 
 let b:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
-\  'typescript': ['prettier', 'eslint']
-\}
+\  'typescript': ['prettier', 'eslint'],
+\ }
+
 let g:ale_fix_on_save = 1
+
+""
+" fzf
+" https://github.com/junegunn/fzf.vim#customization
+""
+let g:fzf_vim = {}
+
+" Customize fzf colors to match your color scheme
+" fzf#wrap translates this to a set of `--color` options
+let g:fzf_colors = {
+\ 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal'],
+\ 'hl': ['fg', 'Comment'],
+\ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+\ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
+\ 'hl+': ['fg', 'Statement'],
+\ 'info': ['fg', 'PreProc'],
+\ 'border': ['fg', 'Ignore'],
+\ 'prompt': ['fg', 'Conditional'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker': ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header': ['fg', 'Comment'],
+\ }
