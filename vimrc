@@ -187,7 +187,7 @@ let g:prettier#autoformat = 1
 let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#exec_cmd_async = 1
 let blacklist = ['package.json']
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*yaml,*.html if index(blacklist, @%) < 0 | PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.mjs,*.mts,*.cjs,*.cts,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.yml,*.html if index(blacklist, @%) < 0 | PrettierAsync
 
 ""
 " ALE
