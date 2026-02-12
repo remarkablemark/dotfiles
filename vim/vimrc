@@ -238,6 +238,12 @@ let g:fzf_colors = {
 " https://github.com/neoclide/coc.nvim
 ""
 
+" Go to definition
+nnoremap <silent> <C-]> <Plug>(coc-definition)
+
+" Open references
+" nnoremap <silent> <C-]> <Plug>(coc-references)
+
 " Signs (gutter)
 hi CocErrorSign   ctermfg=160 ctermbg=NONE cterm=bold
 hi CocWarningSign ctermfg=136 ctermbg=NONE cterm=bold
