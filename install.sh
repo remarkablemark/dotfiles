@@ -53,9 +53,10 @@ fi
 
 if [[ ! -d ~/.vim ]]; then
   mkdir -p ~/.vim
-  ln -sf "$(pwd)/after" ~/.vim/after
-  ln -sf "$(pwd)/bundle" ~/.vim/bundle
-  ln -sf "$(pwd)/vimrc" ~/.vim/vimrc
+  ln -sf "$(pwd)/vim/after" ~/.vim/after
+  ln -sf "$(pwd)/vim/bundle" ~/.vim/bundle
+  ln -sf "$(pwd)/vim/vimrc" ~/.vim/vimrc
+  ln -sf "$(pwd)/vim/coc-settings.json" ~/.vim/coc-settings.json
 fi
 
 # set up global git config
@@ -109,7 +110,11 @@ if [[ ! -d bundle/Vundle.vim/ ]]; then
   git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
   echo 'Installing Vim plugins via Vundle...'
-  vim +PluginInstall +qall
+  vim +PluginInstall +qa
+  brew install node
+  npm ci --prefix bundle/coc.nvim/
+  vim +'CocInstall -sync coc-pyright' +qa
+  brew install ruff
   echo 'Vim plugins installed.'
 fi
 
@@ -133,14 +138,8 @@ tmux source-file ~/.tmux.conf
 # https://github.com/nvm-sh/nvm#install--update-script
 if [[ ! -d ~/.nvm/ ]]; then
   echo 'Installing nvm...'
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  brew install nvm
   nvm alias default node
-fi
-
-# install Yarn
-if [[ ! $(command -v yarn) ]]; then
-  echo 'Installing yarn...'
-  brew install yarn
 fi
 
 # install rbenv
@@ -165,7 +164,7 @@ fi
 # https://github.com/ycm-core/YouCompleteMe#macos
 if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   echo 'Installing YCM dependencies...'
-  brew install cmake python go nodejs
+  brew install cmake python go node
 
   if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
     echo 'Compiling YouCompleteMe...'

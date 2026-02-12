@@ -1,0 +1,50 @@
+{
+  // =============================
+  // Completion behavior
+  // =============================
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
+  "suggest.minTriggerInputLength": 1,
+  "suggest.autoTrigger": "always",
+
+  // =============================
+  // Diagnostics UI
+  // =============================
+  "diagnostic.displayByAle": false,
+  "diagnostic.virtualText": true,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.checkCurrentLine": true,
+
+  // =============================
+  // Python (Pyright)
+  // =============================
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.useLibraryCodeForTypes": true,
+
+  // =============================
+  // Ruff LSP (native server)
+  // =============================
+  "languageserver": {
+    "ruff": {
+      "command": "ruff",
+      "args": ["server"],
+      "filetypes": ["python"],
+      "initializationOptions": {
+        "settings": {
+          "logLevel": "error"
+        }
+      }
+    }
+  },
+
+  // =============================
+  // Formatting
+  // =============================
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
+
+  "[python]": {
+    "editor.defaultFormatter": "ruff"
+  }
+}
