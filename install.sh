@@ -172,10 +172,16 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   fi
 fi
 
+# install bat
+if [[ ! $(command -v bat) ]]; then
+  echo 'Installing bat...'
+  brew install bat
+fi
+
 # install fzf
 if [[ ! $(command -v fzf) ]]; then
   echo 'Installing fzf...'
-  brew install fzf
+  brew install fzf bat
 fi
 
 # install fd
