@@ -3,9 +3,9 @@
   // Completion behavior
   // =============================
   "suggest.noselect": false,
-  "suggest.enablePreselect": true,
+  "suggest.enablePreselect": false,
   "suggest.minTriggerInputLength": 1,
-  "suggest.autoTrigger": "always",
+  "suggest.autoTrigger": "none",
 
   // =============================
   // Diagnostics UI

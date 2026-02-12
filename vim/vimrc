@@ -134,7 +134,7 @@ let g:airline#extensions#ale#enabled=1
 ""
 autocmd CompleteDone * pclose " close Omni-Completion tip window when selection is made
 " when set to 0, this option turns off YCM's identifier completer (the as-you-type-popup)
-"let g:ycm_auto_trigger=0
+" let g:ycm_auto_trigger=0
 
 ""
 " NERDTree
