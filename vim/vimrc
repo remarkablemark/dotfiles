@@ -210,10 +210,11 @@ let g:ale_fix_on_save = 1
 " fzf
 " https://github.com/junegunn/fzf.vim#customization
 ""
+" Initialize configuration dictionary
 let g:fzf_vim = {}
 
 " fzf layout
-let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0 } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 
 " Preview window position
 let g:fzf_preview_window = ['right:60%', 'ctrl-/']
