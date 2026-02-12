@@ -27,7 +27,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --e
 # bat
 export BAT_THEME="Solarized (light)" # fzf preview
 export BAT_PAGER="less -R"
-alias less='bat --paging=always'
 
 # Java
 # https://docs.gradle.org/current/userguide/compatibility.html
