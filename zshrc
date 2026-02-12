@@ -24,9 +24,11 @@ export NVM_DIR="$HOME/.nvm"
 # https://github.com/junegunn/fzf#respecting-gitignore
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 
-# bat (fixes fzf colors)
-export BAT_THEME="Solarized (light)"
-export BAT_PAGER="never"
+# bat
+export BAT_THEME="Solarized (light)" # fzf preview
+export BAT_PAGER="less -R"
+alias cat='bat --paging=never'
+alias less='bat --paging=always'
 
 # Java
 # https://docs.gradle.org/current/userguide/compatibility.html
