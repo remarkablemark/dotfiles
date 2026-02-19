@@ -29,6 +29,7 @@ export BAT_THEME="Solarized (light)" # fzf preview
 export BAT_PAGER="less -R"
 
 # Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # https://docs.gradle.org/current/userguide/compatibility.html
 # export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 

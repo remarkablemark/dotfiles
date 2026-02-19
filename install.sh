@@ -157,7 +157,7 @@ fi
 # install java
 if [[ ! $(command -v java) ]]; then
   echo 'Installing java...'
-  brew install java
+  brew install openjdk
 fi
 
 # compile Vim plugin YouCompleteMe
