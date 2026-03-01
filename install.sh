@@ -178,6 +178,12 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   fi
 fi
 
+# install uv
+if [[ ! $(command -v uv) ]]; then
+  echo 'Installing uv...'
+  brew install uv
+fi
+
 # install bat
 if [[ ! $(command -v bat) ]]; then
   echo 'Installing bat...'
