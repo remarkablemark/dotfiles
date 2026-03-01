@@ -36,3 +36,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # Homebrew
 # https://docs.brew.sh/Analytics#opting-out
 export HOMEBREW_NO_ANALYTICS=1
+
+# GitHub
+# export GITHUB_TOKEN=$(gh auth token)

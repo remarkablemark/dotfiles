@@ -45,6 +45,12 @@ if [[ ! $(command -v git) ]]; then
   brew install git
 fi
 
+# install gh
+if [[ ! $(command -v gh) ]]; then
+  echo 'Installing gh...'
+  brew install gh
+fi
+
 # install vim
 if [[ ! $(command -v vim) ]]; then
   echo 'Installing vim...'
