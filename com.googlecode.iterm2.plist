@@ -15,25 +15,25 @@
 	<key>AITermAPI</key>
 	<integer>2</integer>
 	<key>AIVectorStore</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>AiMaxTokens</key>
-	<integer>1000000</integer>
+	<integer>400000</integer>
 	<key>AiModel</key>
-	<string>gpt-4.1</string>
+	<string>gpt-5.2</string>
 	<key>AiResponseMaxTokens</key>
-	<integer>32768</integer>
+	<integer>128000</integer>
 	<key>AitermURL</key>
 	<string>https://api.openai.com/v1/responses</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>CD32DAF5-E1E4-4C72-A086-630B4D98C544</string>
+	<key>Default Browser Profile Guid</key>
+	<string>CD32DAF5-E1E4-4C72-A086-630B4D98C544</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideScrollbar</key>
 	<true/>
-	<key>HideTab</key>
-	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -41,8 +41,6 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
-			<key>Ambiguous Double Width</key>
-			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -749,10 +747,6 @@
 				<key>Red Component</key>
 				<real>0.74613857269287109</real>
 			</dict>
-			<key>Blinking Cursor</key>
-			<false/>
-			<key>Blur</key>
-			<false/>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -927,8 +921,6 @@
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
 			<true/>
-			<key>Flashing Bell</key>
-			<false/>
 			<key>Foreground Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -972,6 +964,8 @@
 			<string>CD32DAF5-E1E4-4C72-A086-630B4D98C544</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -1043,7 +1037,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1122,8 +1116,6 @@
 				<key>Red Component</key>
 				<real>0.70196080207824707</real>
 			</dict>
-			<key>Send Code When Idle</key>
-			<false/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
@@ -1140,8 +1132,6 @@
 					<integer>0</integer>
 					<key>font</key>
 					<string>.AppleSystemUIFont 12</string>
-					<key>remove empty components</key>
-					<false/>
 				</dict>
 				<key>components</key>
 				<array>
@@ -1163,8 +1153,6 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>remove empty components</key>
-								<false/>
 							</dict>
 						</dict>
 					</dict>
@@ -1186,8 +1174,6 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>remove empty components</key>
-								<false/>
 							</dict>
 						</dict>
 					</dict>
@@ -1209,8 +1195,6 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>remove empty components</key>
-								<false/>
 							</dict>
 						</dict>
 					</dict>
@@ -1232,15 +1216,11 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>remove empty components</key>
-								<false/>
 							</dict>
 						</dict>
 					</dict>
 				</array>
 			</dict>
-			<key>Sync Title</key>
-			<false/>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -1248,15 +1228,13 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Italic Font</key>
 			<true/>
-			<key>Use Non-ASCII Font</key>
-			<false/>
 			<key>Use Separate Colors for Light and Dark Mode</key>
 			<true/>
 			<key>Vertical Spacing</key>
@@ -1269,15 +1247,50 @@
 			<string>/Users/mark</string>
 		</dict>
 	</array>
+	<key>PointerActions</key>
+	<dict>
+		<key>Button,1,1,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kContextMenuPointerAction</string>
+		</dict>
+		<key>Button,2,1,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPasteFromClipboardPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeDown,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPrevWindowPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeLeft,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPrevTabPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeRight,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kNextTabPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeUp,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kNextWindowPointerAction</string>
+		</dict>
+	</dict>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TmuxUnpauseAutomatically</key>
 	<true/>
+	<key>UseTmuxStatusBar</key>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
-	<key>WindowNumber</key>
-	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 </dict>
 </plist>
