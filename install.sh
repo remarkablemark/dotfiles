@@ -110,6 +110,17 @@ if [[ ! -f ~/.zshrc ]]; then
   source ~/.zshrc
 fi
 
+# install nvm
+# https://github.com/nvm-sh/nvm#install--update-script
+if [[ ! -d ~/.nvm/ ]]; then
+  echo 'Installing nvm...'
+  brew install nvm
+  nvm alias default node
+
+  # security: disable postinstall script
+  npm config set ignore-scripts true
+fi
+
 # install Vundle
 if [[ ! -d bundle/Vundle.vim/ ]]; then
   echo 'Installing Vundle...'
@@ -117,7 +128,6 @@ if [[ ! -d bundle/Vundle.vim/ ]]; then
 
   echo 'Installing Vim plugins via Vundle...'
   vim +PluginInstall +qa
-  brew install node
   npm ci --prefix bundle/coc.nvim/
   vim +'CocInstall -sync coc-pyright' +qa
   brew install ruff
@@ -139,14 +149,6 @@ fi
 echo 'Copying tmux config...'
 cp tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
-
-# install nvm
-# https://github.com/nvm-sh/nvm#install--update-script
-if [[ ! -d ~/.nvm/ ]]; then
-  echo 'Installing nvm...'
-  brew install nvm
-  nvm alias default node
-fi
 
 # install rbenv
 if [[ ! $(command -v rbenv) ]]; then
@@ -170,7 +172,7 @@ fi
 # https://github.com/ycm-core/YouCompleteMe#macos
 if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   echo 'Installing YCM dependencies...'
-  brew install cmake python go node
+  brew install cmake python go
 
   if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
     echo 'Compiling YouCompleteMe...'
