@@ -122,13 +122,13 @@ if [[ ! -d ~/.nvm/ ]]; then
 fi
 
 # install Vundle
-if [[ ! -d bundle/Vundle.vim/ ]]; then
+if [[ ! -d vim/bundle/Vundle.vim/ ]]; then
   echo 'Installing Vundle...'
-  git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
+  git clone https://github.com/VundleVim/Vundle.vim.git vim/bundle/Vundle.vim
 
   echo 'Installing Vim plugins via Vundle...'
   vim +PluginInstall +qa
-  npm ci --prefix bundle/coc.nvim/
+  npm ci --prefix vim/bundle/coc.nvim/
   vim +'CocInstall -sync coc-pyright' +qa
   brew install ruff
   echo 'Vim plugins installed.'
@@ -174,9 +174,9 @@ if [[ $(grep 'YouCompleteMe' vimrc) != '' ]]; then
   echo 'Installing YCM dependencies...'
   brew install cmake python go
 
-  if ! test -n $(find bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
+  if ! test -n $(find vim/bundle/YouCompleteMe/third_party/ycmd -type f -name "ycm_core*.so" -maxdepth 1); then
     echo 'Compiling YouCompleteMe...'
-    python3 bundle/YouCompleteMe/install.py --all # --ts-completer
+    python3 vim/bundle/YouCompleteMe/install.py --all # --ts-completer
   fi
 fi
 
