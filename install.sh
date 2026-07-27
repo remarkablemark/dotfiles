@@ -102,11 +102,13 @@ fi
 
 # copy and update Oh My Zsh config
 if [[ ! -f ~/.zshrc ]]; then
-  echo 'Copying and updating Oh My Zsh config...'
-  cat ~/.oh-my-zsh/templates/zshrc.zsh-template >> ~/.zshrc
-  sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
-  echo '' >> ~/.zshrc
-  cat zshrc >> ~/.zshrc
+  # echo 'Copying and updating Oh My Zsh config...'
+  # cat ~/.oh-my-zsh/templates/zshrc.zsh-template >> ~/.zshrc
+  # sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
+  # echo '' >> ~/.zshrc
+  # cat zshrc >> ~/.zshrc
+  echo 'Symlinking Oh My Zsh config...'
+  ln -sf "$(pwd)/zshrc" ~/.zshrc
   source ~/.zshrc
 fi
 
