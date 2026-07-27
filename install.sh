@@ -107,8 +107,9 @@ if [[ ! -f ~/.zshrc ]]; then
   # sed -i '' 's/robbyrussell/sammy/' ~/.zshrc
   # echo '' >> ~/.zshrc
   # cat zshrc >> ~/.zshrc
-  echo 'Symlinking Oh My Zsh config...'
+  echo 'Symlinking Oh My Zsh...'
   ln -sf "$(pwd)/zshrc" ~/.zshrc
+  ln -sf "$(pwd)/zshenv" ~/.zshenv
   source ~/.zshrc
 fi
 
