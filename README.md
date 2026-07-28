@@ -86,9 +86,6 @@ tree -I bundle
 
 ```
 .
-├── after
-│   └── ftplugin
-│       └── php.vim
 ├── com.googlecode.iterm2.plist
 ├── gitignore
 ├── install.sh
@@ -97,10 +94,16 @@ tree -I bundle
 ├── README.md
 ├── RectangleConfig.json
 ├── tmux.conf
-├── vimrc
+├── vim
+│   ├── after
+│   │   └── ftplugin
+│   │       └── php.vim
+│   ├── coc-settings.json
+│   └── vimrc
+├── zshenv
 └── zshrc
 
-3 directories, 11 files
+4 directories, 13 files
 ```
 
 ## License
