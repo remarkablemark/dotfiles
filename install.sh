@@ -149,8 +149,8 @@ if [[ ! $(command -v reattach-to-user-namespace) ]]; then
   brew install reattach-to-user-namespace
 fi
 
-echo 'Copying tmux config...'
-cp tmux.conf ~/.tmux.conf
+echo 'Symlinking tmux config...'
+ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
 # install imgcat
