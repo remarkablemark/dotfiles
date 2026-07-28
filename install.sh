@@ -153,6 +153,12 @@ echo 'Copying tmux config...'
 cp tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
+# install imgcat
+if [[ ! $(command -v imgcat) ]]; then
+  echo 'Installing imgcat...'
+  curl -fsSL https://iterm2.com/utilities/imgcat -o imgcat && chmod +x imgcat && mv imgcat $(brew --prefix)/bin/
+fi
+
 # install rbenv
 if [[ ! $(command -v rbenv) ]]; then
   # ruby depends on openssl
