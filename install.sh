@@ -27,6 +27,8 @@ apps=(
   'flux-app'
   'google-chrome'
   'iterm2'
+  'kap'
+  'krita'
   'rectangle'
   'slack'
 )
