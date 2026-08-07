@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'Setup start.'
+echo 'Setup start 🚀'
 
 # check for macOS
 if [[ $OSTYPE != 'darwin'* ]]; then
@@ -227,6 +227,18 @@ if [[ ! $(command -v rg) ]]; then
   brew install rg
 fi
 
+# install act
+if [[ ! $(command -v act) ]]; then
+  echo 'Installing act...'
+  brew install act
+fi
+
+# install yamllint
+if [[ ! $(command -v yamllint) ]]; then
+  echo 'Installing yamllint...'
+  brew install yamllint
+fi
+
 # restart shell
-echo 'Setup end.'
+echo 'Setup end ✨'
 exec -l $SHELL
