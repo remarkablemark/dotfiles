@@ -200,6 +200,9 @@ let g:ale_linters = {
 let g:ale_linters#javascript = ['eslint']
 let g:ale_linters#typescript = ['tsserver', 'eslint']
 
+let g:ale_yaml_yamllint_executable = 'yamllint'
+let g:ale_yaml_yamllint_options = '-c ~/.config/yamllint/config'
+
 let b:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
 \  'typescript': ['prettier', 'eslint'],

@@ -237,6 +237,8 @@ fi
 if [[ ! $(command -v yamllint) ]]; then
   echo 'Installing yamllint...'
   brew install yamllint
+  mkdir -p ~/.config/yamllint/
+  ln -sf "$(pwd)/yamllint/config.yml " ~/.config/yamllint/config
 fi
 
 # restart shell
