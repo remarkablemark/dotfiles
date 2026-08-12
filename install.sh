@@ -29,6 +29,7 @@ apps=(
   'iterm2'
   'kap'
   'krita'
+  'obs'
   'rectangle'
   'slack'
 )
